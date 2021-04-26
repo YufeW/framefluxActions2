@@ -1,7 +1,7 @@
 name: GitHub Actions Demo9
 on:
   schedule:
-    - cron:  '*/06 * * * *'
+    - cron:  '*/6 * * * *'
 
 jobs:
   Explore-GitHub-Actions:
