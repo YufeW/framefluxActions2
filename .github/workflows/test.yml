@@ -1,10 +1,10 @@
 name: Email
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
   schedule:
     - cron:  '*/6 * * * *'
 
@@ -25,4 +25,6 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run the main file
+        env:
+          SUPER_SECRET_PASSWORD: ${{ secrets.SUPER_SECRET_PASSWORD }}
         run: python -m main
