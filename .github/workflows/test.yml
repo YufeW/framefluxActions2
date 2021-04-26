@@ -1,12 +1,8 @@
 name: Email
 
 on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
   schedule:
-    - cron:  '0-59/6 * * * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
