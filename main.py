@@ -1,5 +1,6 @@
 import email
 import smtplib
+import os
 
 def send_email(sender, password, recipient, subject, message):
     msg = email.message_from_string(message)
@@ -18,7 +19,7 @@ def send_email(sender, password, recipient, subject, message):
     s.quit()
 
 sender = 'antalyze2021@outlook.com'
-password = 'Simulation2021!'
+password = os.environ['SUPER_SECRET_PASSWORD']
 recipient = 'yufe@frameflux.nl'
 subject = '4'
 message = '5'
